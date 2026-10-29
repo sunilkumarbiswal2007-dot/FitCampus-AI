@@ -1,0 +1,6 @@
+{
+  "name": "FitCampus AI",
+  "description": "Smart AI-powered campus fitness companion for students featuring real-time step counting, 3D interactive graphics, personalized Gemini AI workout & habit recommendations, campus leaderboards, and gamified challenges.",
+  "requestFramePermissions": ["accelerometer", "gyroscope", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

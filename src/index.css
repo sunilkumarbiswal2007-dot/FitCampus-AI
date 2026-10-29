@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 14px 30px -10px rgba(16, 185, 129, 0.15);
+}
+
+/* Neumorphism Elements */
+.neumorph-dark {
+  background: #0b1120;
+  box-shadow: 
+    8px 8px 18px #060912, 
+    -8px -8px 18px #10192e,
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.neumorph-dark-inset {
+  background: #090e1a;
+  box-shadow: 
+    inset 4px 4px 10px #04070d, 
+    inset -4px -4px 10px #0e1527;
+}
+
+.neumorph-light {
+  background: #f1f5f9;
+  box-shadow: 
+    6px 6px 14px #d1d5db, 
+    -6px -6px 14px #ffffff;
+}
+
+.neumorph-light-inset {
+  background: #eef2f6;
+  box-shadow: 
+    inset 4px 4px 8px #cbd5e1, 
+    inset -4px -4px 8px #ffffff;
+}
+
+/* Glow effects */
+.glow-emerald {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.45);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(6, 182, 212, 0.45);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 25px -4px rgba(99, 102, 241, 0.45);
+}
+
+/* Pulse animation for live step sensor */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
